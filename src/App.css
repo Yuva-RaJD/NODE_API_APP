@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  white-space: pre-line;
   /* background-color: rgb(221, 221, 221); */
 }
 .backGround {

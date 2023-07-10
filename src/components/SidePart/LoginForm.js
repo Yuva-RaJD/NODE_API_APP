@@ -1,23 +1,11 @@
 import { Box, Button, TextField } from "@mui/material";
 import { useState } from "react";
 import { loginUser } from "../../utils/UserControl";
-
-const style = {
-  //   position: "absolute",
-  //   top: "50%",
-  //   left: "50%",
-  //   transform: "translate(-50%, -50%)",
-  //   width: 800,
-  bgcolor: "background.paper",
-  //   border: "2px solid #000",
-  borderRadius: "5px",
-  //   boxShadow: 24,
-  //   p: 4,
-  boxShadow: "0 0 5px #c1bcbc",
-  // paddingX: "10px",
-  paddingX: 1,
-  marginX: "10px",
-};
+import {
+  LoginFormMainBoxStyle,
+  LoginFormMainDivStyle,
+  LoginFormStyle,
+} from "../../styles/SidePart.Styles";
 
 function LoginForm(props) {
   const { handleSignUp, handleCheckLogin } = props;
@@ -53,45 +41,13 @@ function LoginForm(props) {
 
   return (
     <>
-      <Box
-        sx={{
-          width: "100%",
-          height: 1,
-          paddingX: 1,
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          flexDirection: "column",
-          margin: "1px",
-          zIndex: 10,
-          marginTop: "10px",
-          // backgroundColor: "white",
-        }}
-      >
-        <div
-          style={{
-            width: "100%",
-            padding: "10px",
-            display: "flex",
-            justifyContent: "center",
-            // alignItems: "center",
-            flexDirection: "column",
-            margin: "5px",
-            backgroundColor: "white",
-            borderRadius: "5px",
-            boxShadow: "0 0 5px #c1bcbc",
-          }}
-        >
+      <Box sx={LoginFormMainBoxStyle}>
+        <div style={LoginFormMainDivStyle}>
           <h3>Login </h3>
           <form
             onSubmit={handleLoginForm}
             autoComplete="off"
-            style={{
-              width: "100%",
-              display: "flex",
-              gap: "5px",
-              flexDirection: "column",
-            }}
+            style={LoginFormStyle}
           >
             <TextField
               label="Email"

@@ -1,24 +1,11 @@
 import { Box, Typography } from "@mui/material";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
+import { NavBarBoxStyles } from "../styles/NavBar.Styles";
 
 function NavBar(props) {
   const { title } = props;
   return (
-    <Box
-      sx={{
-        width: 1,
-        height: "70px",
-        color: "black",
-        position: "fixed",
-        top: 0,
-        zIndex: 1,
-        display: "flex",
-        backgroundColor: "white",
-        justifyContent: "center",
-        alignItems: "center",
-        boxShadow: 5,
-      }}
-    >
+    <Box sx={NavBarBoxStyles}>
       <Box
         sx={{
           width: "90%",

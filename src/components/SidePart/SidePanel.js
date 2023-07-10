@@ -1,29 +1,44 @@
+import * as React from "react";
 import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import { Box, Button, CardActionArea } from "@mui/material";
 
-export default function SidePanel() {
+const style = {
+  bgcolor: "background.paper",
+  borderRadius: "5px",
+  boxShadow: "0 0 5px #c1bcbc",
+  paddingX: 1,
+  marginX: "10px",
+  marginTop: "30px",
+  position: "fixed",
+  bottom: "20px",
+};
+
+export const SidePanel = () => {
+  const hadleClick = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardMedia
-        component="img"
-        alt="green iguana"
-        height="140"
-        image={`https://source.unsplash.com/random/800x800/?img=10`}
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
-          Lizard
-        </Typography>
-        <Typography variant="body2" color="text.secondary"></Typography>
-      </CardContent>
-      <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions>
-    </Card>
+    <Box sx={style} onClick={hadleClick}>
+      <Card sx={{ maxWidth: 345 }}>
+        <CardActionArea>
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="div">
+              Hello Reader
+            </Typography>
+            <Typography color="text.secondary">
+              "Welcome to our blog app! Join our vibrant community of readers
+              and writers by
+              <Button> registering today.</Button>
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+    </Box>
   );
-}
+};

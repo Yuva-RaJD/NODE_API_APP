@@ -6,9 +6,9 @@ import {
   Paper,
   Typography,
 } from "@mui/material";
-import { getToken } from "../utils/Common";
+import { getToken } from "../../utils/Common";
 import { useEffect, useState } from "react";
-import { getUser } from "../utils/UserControl";
+import { getUser } from "../../utils/UserControl";
 
 export default function UserProfile() {
   const [userData, setUserData] = useState([]);

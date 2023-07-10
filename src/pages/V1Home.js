@@ -1,20 +1,28 @@
 import { useEffect, useState } from "react";
-import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
-import Paper from "@mui/material/Paper";
-import Typography from "@mui/material/Typography";
+
+//nav bar
 import NavBar from "../includes/NaVBar";
-import UserProfile from "../components/UserProfile";
-import CreatePost from "../components/CreatePost";
-import ProfileSetting from "../components/ProfileSetting";
-import Blogs from "../components/mainPart/BlogView";
-import BlogList from "../components/mainPart/BlogLists";
-import BottomBlogs from "../components/BottomPart/BottomBlogs";
-import ScrollToTopButton from "../components/ScrollTopButton";
+
+//Left side part components
+import UserProfile from "../components/SidePart/UserProfile";
+import CreatePost from "../components/SidePart/CreatePost";
+import ProfileSetting from "../components/SidePart/ProfileSetting";
 import LoginForm from "../components/SidePart/LoginForm";
 import RegisterForm from "../components/SidePart/RegisterForm";
+import { SidePanel } from "../components/SidePart/SidePanel";
+
+//main/ middle component
+import Blogs from "../components/mainPart/BlogView";
+import BlogList from "../components/mainPart/BlogLists";
+
+//bottom setion
+import BottomBlogs from "../components/BottomPart/BottomBlogs";
+
+//scroll to top button
+import ScrollToTopButton from "../components/ScrollTopButton";
+//login condition
 import { isLoggedIn } from "../utils/Common";
-import SidePanel from "../components/SidePart/SidePanel";
 
 function HomePage() {
   const [signUp, setSignUp] = useState(false);
@@ -45,9 +53,9 @@ function HomePage() {
   return (
     <>
       <ScrollToTopButton />
+      <NavBar title={"BLOG post"} />
       <div className="backGround">
-        <NavBar title={"BLOG post"} />
-        <Grid container sx={{ width: "100%", height: 1, mt: "70px" }}>
+        <Grid container sx={{ width: "100%", height: 1 }}>
           {/* side part  */}
           <Grid
             className="innerShadow"
@@ -56,7 +64,6 @@ function HomePage() {
             container
             direction="column"
             sx={{
-              // backgroundColor: "red",
               height: "100%",
             }}
           >
@@ -94,7 +101,6 @@ function HomePage() {
                   lg={2}
                   sx={{
                     width: 1,
-                    // backgroundColor: "red",
                   }}
                 >
                   <ProfileSetting handleCheckLogin={handleCheckLogin} />
@@ -117,12 +123,10 @@ function HomePage() {
                   lg={2}
                   sx={{
                     width: 1,
-                    // backgroundColor: "red",
                   }}
                 ></Grid>
               </>
             )}
-
             {/* main part */}
           </Grid>
           <Grid item lg={9} container sx={{ width: "100%", height: 1 }}>

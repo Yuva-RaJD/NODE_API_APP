@@ -4,9 +4,9 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Box, Button, TextField } from "@mui/material";
 import SettingsIcon from "@mui/icons-material/Settings";
-import { getToken, removeToken } from "../utils/Common";
+import { getToken, removeToken } from "../../utils/Common";
 import { useEffect, useState } from "react";
-import { getUser } from "../utils/UserControl";
+import { getUser } from "../../utils/UserControl";
 import { useNavigate } from "react-router-dom";
 
 const style = {

@@ -1,20 +1,9 @@
-import { useCallback, useEffect, useState } from "react";
+import { useState } from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
-import Modal from "@mui/material/Modal";
-import axios from "axios";
 import { Divider, TextField } from "@mui/material";
-import { useNavigate } from "react-router-dom";
-import { createPost } from "../utils/PostControl";
-
-const style = {
-  bgcolor: "background.paper",
-  borderRadius: "5px",
-  boxShadow: "0 0 5px #c1bcbc",
-  paddingX: 1,
-  marginX: "10px",
-};
+import { createPost } from "../../utils/PostControl";
+import { mainDivStyle } from "../../styles/SidePart.Styles";
 
 function CreatePost() {
   const [formData, setFormData] = useState({
@@ -48,7 +37,7 @@ function CreatePost() {
     }
   };
   return (
-    <Box sx={style}>
+    <Box sx={mainDivStyle}>
       <div>
         <h4>Post your blog</h4>
       </div>
