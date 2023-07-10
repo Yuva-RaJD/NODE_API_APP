@@ -1,20 +1,8 @@
-import * as React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Box, Button, CardActionArea } from "@mui/material";
-
-const style = {
-  bgcolor: "background.paper",
-  borderRadius: "5px",
-  boxShadow: "0 0 5px #c1bcbc",
-  paddingX: 1,
-  marginX: "10px",
-  marginTop: "30px",
-  position: "fixed",
-  bottom: "20px",
-};
+import { SidePanelBoxStle } from "../../styles/SidePart.Styles";
 
 export const SidePanel = () => {
   const hadleClick = () => {
@@ -24,7 +12,7 @@ export const SidePanel = () => {
     });
   };
   return (
-    <Box sx={style} onClick={hadleClick}>
+    <Box sx={SidePanelBoxStle} onClick={hadleClick}>
       <Card sx={{ maxWidth: 345 }}>
         <CardActionArea>
           <CardContent>

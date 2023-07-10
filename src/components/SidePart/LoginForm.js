@@ -43,7 +43,7 @@ function LoginForm(props) {
     <>
       <Box sx={LoginFormMainBoxStyle}>
         <div style={LoginFormMainDivStyle}>
-          <h3>Login </h3>
+          <h6>Login </h6>
           <form
             onSubmit={handleLoginForm}
             autoComplete="off"
@@ -77,10 +77,10 @@ function LoginForm(props) {
                 Login
               </Button>
             </Box>
-            <p>
+            <h6>
               Dont have an account?
               <Button onClick={handleSignUp}>Sign Up</Button>
-            </p>
+            </h6>
           </form>
         </div>
       </Box>

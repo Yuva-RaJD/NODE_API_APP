@@ -1,14 +1,11 @@
-import {
-  Avatar,
-  Box,
-  Card,
-  CardContent,
-  Paper,
-  Typography,
-} from "@mui/material";
+import { Avatar, Box } from "@mui/material";
 import { getToken } from "../../utils/Common";
 import { useEffect, useState } from "react";
 import { getUser } from "../../utils/UserControl";
+import {
+  UserProfileBoXStyle,
+  UserProfileDivStyle,
+} from "../../styles/SidePart.Styles";
 
 export default function UserProfile() {
   const [userData, setUserData] = useState([]);
@@ -28,36 +25,8 @@ export default function UserProfile() {
   }, []);
 
   return (
-    <Box
-      sx={{
-        width: "100%",
-        height: 1,
-        paddingX: 1,
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        flexDirection: "column",
-        margin: "1px",
-        zIndex: 10,
-        marginTop: "10px",
-        // backgroundColor: "white",
-      }}
-    >
-      <div
-        style={{
-          width: "100%",
-          height: "100%",
-          padding: "10px",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          flexDirection: "row",
-          margin: "5px",
-          backgroundColor: "white",
-          borderRadius: "5px",
-          boxShadow: "0 0 5px #c1bcbc",
-        }}
-      >
+    <Box sx={UserProfileBoXStyle}>
+      <div style={UserProfileDivStyle}>
         <div>
           <Avatar
             alt="Remy Sharp"

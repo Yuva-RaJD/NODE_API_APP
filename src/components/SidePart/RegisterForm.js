@@ -1,6 +1,11 @@
 import { Box, Button, TextField } from "@mui/material";
 import { useState } from "react";
 import { registerUser } from "../../utils/UserControl";
+import {
+  RegisterFormBox,
+  RegisterFormDiv,
+  RegisterFormStyle,
+} from "../../styles/SidePart.Styles";
 
 function RegisterForm(props) {
   const { handleSignIn } = props;
@@ -33,43 +38,11 @@ function RegisterForm(props) {
   };
   return (
     <>
-      <Box
-        sx={{
-          width: "100%",
-          height: 1,
-          paddingX: 1,
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          flexDirection: "column",
-          margin: "1px",
-          zIndex: 10,
-          marginTop: "10px",
-          // backgroundColor: "white",
-        }}
-      >
-        <div
-          style={{
-            width: "100%",
-            padding: "10px",
-            display: "flex",
-            // justifyContent: "center",
-            // alignItems: "center",
-            flexDirection: "column",
-            margin: "5px",
-            backgroundColor: "white",
-            borderRadius: "5px",
-            boxShadow: "0 0 5px #c1bcbc",
-          }}
-        >
+      <Box sx={RegisterFormBox}>
+        <div style={RegisterFormDiv}>
           <h6>Register And start Posting</h6>
           <form
-            style={{
-              width: "100%",
-              display: "flex",
-              gap: "5px",
-              flexDirection: "column",
-            }}
+            style={RegisterFormStyle}
             onSubmit={handleRegisterForm}
             autoComplete="off"
           >
@@ -112,9 +85,9 @@ function RegisterForm(props) {
               </Button>
             </Box>
           </form>
-          <p>
+          <h6>
             Have and account? <Button onClick={handleSignIn}>Login</Button>
-          </p>
+          </h6>
         </div>
       </Box>
     </>

@@ -2,23 +2,14 @@ import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { Box, Button, TextField } from "@mui/material";
+import { Box, Button } from "@mui/material";
 import SettingsIcon from "@mui/icons-material/Settings";
 import { getToken, removeToken } from "../../utils/Common";
 import { useEffect, useState } from "react";
 import { getUser } from "../../utils/UserControl";
-import { useNavigate } from "react-router-dom";
-
-const style = {
-  bgcolor: "background.paper",
-  borderRadius: "5px",
-  boxShadow: "0 0 5px #c1bcbc",
-  padding: 1,
-  margin: "10px",
-};
+import { SettingBoxStyle } from "../../styles/SidePart.Styles";
 
 function ProfileSetting({ handleCheckLogin }) {
-  const navigate = useNavigate();
   const [userData, setUserData] = useState([]);
 
   const handleLogout = () => {
@@ -47,7 +38,7 @@ function ProfileSetting({ handleCheckLogin }) {
   }, []);
 
   return (
-    <Box sx={style}>
+    <Box sx={SettingBoxStyle}>
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
